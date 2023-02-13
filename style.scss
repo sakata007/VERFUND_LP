@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.register {
+
+}
+
+.header {
+
+}
+main {
+  .top {
+    &__text {
+      &--nav {
+        border: orange 1px solid;
+      }
+    }
+  }
+}
