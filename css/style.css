@@ -3,6 +3,20 @@ html {
   font-size: 62.5%;
   font-family: "Noto Sans JP";
 }
+.PConly {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .PConly {
+    display: block !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .SPonly {
+    display: none !important;
+  }
+}
 
 body {
   font-size: 1.6rem;
@@ -22,6 +36,8 @@ body {
 
 .container {
   padding: 0 5vw;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 .ml-4 {
@@ -53,35 +69,6 @@ body {
   opacity: 0.7;
 }
 
-.banner {
-  background-image: url(/image/banner-image_sp.png);
-  padding-top: 4.5rem;
-  padding-bottom: 4rem;
-  font-size: 2.4rem;
-  line-height: 4rem;
-  letter-spacing: 0.2rem;
-}
-.banner__text {
-  color: #fff;
-}
-.banner__text span {
-  color: #F19917;
-}
-.banner__buttonArea {
-  position: relative;
-  margin-top: 15rem;
-}
-.banner__buttonArea img {
-  position: absolute;
-  top: -15.5rem;
-  right: -3rem;
-}
-.banner__buttonArea__button {
-  font-size: 2rem;
-  line-height: 4.8rem;
-  padding: 1.2rem;
-}
-
 .bold {
   font-weight: bold;
 }
@@ -100,12 +87,28 @@ body {
 .header__title img {
   height: 100%;
 }
+.header__container {
+  padding: 0 5vw;
+}
 
 main .top {
-  padding-top: 100px;
+  padding-top: 10rem;
   padding-bottom: 4rem;
   background-image: url(/image/top-bg.png);
   background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 600px) {
+  main .top {
+    background-image: url(/image/top_bg_pc.jpg);
+    padding-top: 21rem;
+    padding-bottom: 14rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  main .top__box {
+    width: 445px;
+  }
 }
 main .top__text {
   display: flex;
@@ -124,6 +127,11 @@ main .top__catchCopy {
   margin-top: 4rem;
   padding-bottom: 31rem;
 }
+@media screen and (min-width: 600px) {
+  main .top__catchCopy {
+    padding-bottom: 9rem;
+  }
+}
 main .top__buttonArea {
   position: relative;
 }
@@ -131,6 +139,12 @@ main .top__buttonArea img {
   position: absolute;
   top: -15.5rem;
   left: -3rem;
+}
+@media screen and (min-width: 600px) {
+  main .top__buttonArea img {
+    top: -9rem;
+    left: 42rem;
+  }
 }
 main .top__button {
   display: inline-block;
@@ -142,6 +156,11 @@ main .top__button {
   text-align: center;
   border-radius: 9999px;
 }
+@media screen and (min-width: 600px) {
+  main .top__button {
+    padding: 1.8rem;
+  }
+}
 main .top__button span {
   background-color: #fff;
   color: #F19917;
@@ -149,37 +168,88 @@ main .top__button span {
   border-radius: 9999px;
   margin-right: 1rem;
 }
-main .top .bg-image {
-  background-image: url(/image/マスクグループ\ 4178.jpg);
-}
 main .recommendation {
   margin-top: 4rem;
 }
-main .recommendation__button {
-  display: inline-block;
-  margin-bottom: 4rem;
-  padding: 2rem;
+@media screen and (min-width: 600px) {
+  main .recommendation {
+    position: relative;
+    padding-bottom: 12rem;
+  }
+}
+main .recommendation__buttonArea {
+  margin: 0 auto 4rem;
+  height: 7.8rem;
   width: 100%;
   background-color: #F19917;
   font-size: 2rem;
-  text-align: center;
   border-radius: 0.5rem;
+  position: relative;
 }
-main .recommendation__button .button__text {
+@media screen and (min-width: 600px) {
+  main .recommendation__buttonArea {
+    width: 33rem;
+    margin: 0 0 4rem auto;
+  }
+}
+main .recommendation__buttonArea::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 0.9rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 2px solid #F19917;
+  border-right: 2px solid #F19917;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+main .recommendation__buttonArea::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -2rem;
+  width: 2rem;
+  height: 100%;
+  transform: translateX(-100%);
+  background: #211613;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+main .recommendation__buttonArea .square__button {
+  display: inline-block;
+  width: calc(100% - 2.1rem);
+  height: 100%;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+main .recommendation__buttonArea .square__button--blacktext {
+  display: inline-block;
   font-size: 1.4rem;
-  padding-bottom: 1rem;
   font-weight: bold;
 }
-main .recommendation__button .white {
+main .recommendation__buttonArea .square__button--whitetext {
   color: #fff;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
 }
-main .recommendation__button span {
+main .recommendation__buttonArea .square__button--whitetext span {
   font-size: 1.6rem;
   background-color: #fff;
   color: #F19917;
   padding: 0.5rem 1.7rem;
   border-radius: 9999px;
   margin-right: 1rem;
+}
+main .recommendation__list {
+  width: 100%;
+  max-width: 73rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  main .recommendation__list {
+    width: rem;
+  }
 }
 main .recommendation__li {
   background-color: rgba(241, 153, 23, 0.2);
@@ -194,30 +264,57 @@ main .recommendation__li {
 main .recommendation__li--text {
   margin-left: 0.7rem;
 }
+@media screen and (min-width: 600px) {
+  main .recommendation__li {
+    font-size: 2rem;
+    padding: 2.5rem;
+  }
+}
 main .recommendation__figure {
   width: 100%;
+}
+@media screen and (min-width: 1025px) {
+  main .recommendation__figure {
+    width: 35vw;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 main .recommendation__figure img {
   width: 100%;
 }
 main .explanation {
   background-image: url(/image/building.jpg);
+  background-size: cover;
   background-color: rgba(128, 128, 128, 0.1);
   background-blend-mode: darken;
-  background-size: cover;
   background-repeat: no-repeat;
   padding-top: 8.5rem;
   padding-bottom: 8rem;
 }
+@media screen and (min-width: 600px) {
+  main .explanation {
+    background-image: url(/image/explanation_bg_pc.jpg);
+  }
+}
 main .explanation__text {
   margin-top: 4.4rem;
   margin-bottom: 8.8rem;
+  margin: 4.4rem auto 8.8rem;
   line-height: 3.2rem;
+  max-width: 73rem;
 }
 main .explanation__image {
   width: 55vw;
   text-align: center;
   margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  main .explanation__image {
+    width: 100%;
+    max-width: 73rem;
+  }
 }
 main .explanation__image img {
   width: 100%;
@@ -225,6 +322,17 @@ main .explanation__image img {
 main .gain {
   padding-top: 8.5rem;
   padding-bottom: 8rem;
+}
+@media screen and (min-width: 1025px) {
+  main .gain__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .gain__text {
+    width: calc(100% - 50rem);
+  }
 }
 main .gain__text__title {
   font-weight: bold;
@@ -236,10 +344,84 @@ main .gain__list {
   line-height: 2.4rem;
   margin-top: 2.8rem;
   margin-bottom: 4.3rem;
-  padding-left: 5vw;
+  padding-left: 1.1rem;
 }
 main .gain__list li {
   list-style: disc;
+}
+main .gain__image {
+  width: 100%;
+  max-width: 559px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1025px) {
+  main .gain__image {
+    margin-top: 4.4rem;
+    max-width: 445px;
+  }
+}
+main .gain__image img {
+  width: 100%;
+}
+main .banner {
+  background-image: url(/image/banner-image_sp.png);
+  background-size: cover;
+  padding-top: 4.5rem;
+  padding-bottom: 4rem;
+  font-size: 2.4rem;
+  line-height: 4rem;
+  letter-spacing: 0.2rem;
+}
+@media screen and (min-width: 600px) {
+  main .banner {
+    background-image: url(/image/banner_bg_pc.jpg);
+  }
+}
+@media screen and (min-width: 600px) {
+  main .banner__layout {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+main .banner__text {
+  color: #fff;
+}
+main .banner__text span {
+  color: #F19917;
+}
+main .banner__buttonArea {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin-top: 15rem;
+}
+@media screen and (min-width: 600px) {
+  main .banner__buttonArea {
+    margin-top: 3rem;
+    width: 54rem;
+  }
+}
+main .banner__buttonArea img {
+  position: absolute;
+  top: -15.5rem;
+  right: -3rem;
+}
+@media screen and (min-width: 600px) {
+  main .banner__buttonArea img {
+    top: -12rem;
+    right: -3rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .banner__buttonArea img {
+    top: -10rem;
+    right: -13rem;
+  }
+}
+main .banner__buttonArea__button {
+  font-size: 2rem;
+  line-height: 4.8rem;
+  padding: 1.2rem;
 }
 main .feature {
   padding-top: 7.7rem;
@@ -280,10 +462,17 @@ main .feature__text {
 }
 main .system {
   background-image: url(/image/system_bg.jpg);
+  background-size: cover;
+  background-position: center;
   padding: 8rem 0;
 }
-main .system__img {
-  margin-top: 4.8rem;
+main .system__image {
+  margin: 4.8rem auto 0;
+  width: 100%;
+  max-width: 50rem;
+}
+main .system__image img {
+  width: 100%;
 }
 main .Amazon {
   padding-top: 8rem;
@@ -331,7 +520,7 @@ main .Amazon__notice li {
   list-style: "※";
 }
 main .register {
-  padding: 8rem 0 8.8rem;
+  padding-top: 8rem;
 }
 main .register__steps {
   padding-top: 4.6rem;
@@ -339,8 +528,8 @@ main .register__steps {
 main .register .pb-43 {
   padding-bottom: 4.3rem;
 }
-main .register__step {
-  padding-bottom: 8.5rem;
+main .register__step:not(:nth-of-type(1)) {
+  margin-top: 8.4rem;
 }
 main .register__step .step__nav {
   display: inline-block;
@@ -356,10 +545,93 @@ main .register__step--text h3 {
   font-size: 1.8rem;
   padding-bottom: 1rem;
 }
+main .register__step--text h4 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+main .register__step--buttons {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+main .register__step--detail {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
 main .register__flex {
   display: flex;
   justify-content: center;
 }
 main .register__flex img {
   margin-right: 1rem;
+}
+main .register__button {
+  font-size: 1.4rem;
+  display: inline-block;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+main .register .--orange {
+  background-color: #F19917;
+  color: #fff;
+}
+main .register .--white {
+  border: #F19917 1px solid;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+main .register .Identification {
+  background-color: #F7F7F7;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+main .register .Identification__title {
+  font-weight: bold;
+}
+main .register .Identification ul {
+  margin-left: 4vw;
+}
+main .register .Identification li {
+  list-style: disc;
+}
+main .footer {
+  background-color: #EFF1F6;
+  text-align: center;
+  padding: 4rem 0;
+}
+main .footer__flex {
+  display: flex;
+  justify-content: center;
+}
+main .footer__logo {
+  margin-top: 2.8rem;
+  margin-bottom: 3.3rem;
+}
+main .footer__logo--text {
+  color: #71808A;
+  display: inline-block;
+  margin-top: 2.4rem;
+}
+main .footer__li {
+  display: inline-block;
+  padding: 0.8rem;
+  color: #211613;
+}
+main .footer__li:nth-of-type(1) {
+  position: relative;
+}
+main .footer__li:nth-of-type(1)::after {
+  content: "";
+  width: 0.1rem;
+  height: 2rem;
+  background-color: #211613;
+  position: absolute;
+  top: 1.5rem;
+  right: -0.2rem;
 }

@@ -1,7 +1,23 @@
 @charset "UTF-8";
+
+@use './mixin' as g;
+
 html {
   font-size: 62.5%;
   font-family: 'Noto Sans JP';
+  @include g.mq('tab') {
+  }
+}
+.PConly {
+  display: none;
+  @include g.mq('tab') {
+    display: block!important;
+  }
+}
+.SPonly {
+  @include g.mq('tab') {
+    display: none!important;
+  }
 }
 body {
   font-size: 1.6rem;
@@ -21,14 +37,13 @@ $orange: #F19917;
 }
 .container {
   padding: 0 5vw;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 .ml-4 {
   margin-left: 3rem;
 }
 .PConly {
-  @mixin mq {
-    
-  }
   display: none;
 }
 .button {
@@ -52,34 +67,7 @@ $orange: #F19917;
   }
 }
 
-.banner {
-  background-image: url(/image/banner-image_sp.png);
-  padding-top: 4.5rem;
-  padding-bottom: 4rem;
-  font-size: 2.4rem;
-  line-height: 4rem;
-  letter-spacing: 0.2rem;
-  &__text {
-    color: #fff;
-    span {
-      color: $orange;
-    }
-  }
-  &__buttonArea {
-  position: relative;
-  margin-top: 15rem;
-  img {
-    position: absolute;
-    top: -15.5rem;
-    right: -3rem;
-  }
-  &__button {
-    font-size: 2rem;
-    line-height: 4.8rem;
-    padding: 1.2rem;
-  }
-}
-}
+
 .bold {
       font-weight: bold;
     }
@@ -96,25 +84,38 @@ $orange: #F19917;
     display: inline-block;
     height: 3.5rem;
     img {
-      // width: 13.3rem;
       height: 100%;
     }
+  }
+  &__container {
+    padding: 0 5vw;
   }
 }
 main {
   // top-----------------
   .top {
-    padding-top: 100px;
+    padding-top: 10rem;
     padding-bottom: 4rem;
     background-image: url(/image/top-bg.png);
     background-size: cover;
+    background-position: center;
+    @include g.mq('tab') {
+      background-image: url(/image/top_bg_pc.jpg);
+      padding-top: 21rem;
+      padding-bottom: 14rem;
+    }
+
+    &__box {
+    @include g.mq('tab') {
+      width: 445px;
+      }
+    }
     &__text {
       display: flex;
       &--nav {
         color: #fff;
         font-size: 1.5rem;
         border-bottom: #F19917 2px solid;
-        
       }
     }
     &__catchCopy {
@@ -125,6 +126,9 @@ main {
       line-height: 6rem;
       margin-top: 4rem;
       padding-bottom: 31rem;
+      @include g.mq('tab') {
+        padding-bottom: 9rem;
+      }
     }
     &__buttonArea {
       position: relative;
@@ -132,6 +136,10 @@ main {
         position: absolute;
         top: -15.5rem;
         left: -3rem;
+        @include g.mq('tab') {
+          top: -9rem;
+          left: 42rem;
+        }
       }
     }
     &__button {
@@ -143,6 +151,9 @@ main {
       font-size: 2rem;
       text-align: center;
       border-radius: 9999px;
+      @include g.mq('tab') {
+        padding: 1.8rem;
+      }
       span {
         background-color: #fff;
         color: $orange;
@@ -150,37 +161,83 @@ main {
         border-radius: 9999px;
         margin-right: 1rem;
       }
-    }
-    .bg-image {
-      background-image: url(/image/マスクグループ\ 4178.jpg);
     }
   }
   .recommendation {
     margin-top: 4rem;
-    &__button {
-      display: inline-block;
-      margin-bottom: 4rem;
-      padding: 2rem ;
+    @include g.mq('tab') {
+      position: relative;
+      padding-bottom: 12rem;
+    }
+    &__buttonArea {
+      margin:0 auto 4rem;
+      height: 7.8rem;
       width: 100%;
       background-color: $orange;
       font-size: 2rem;
-      text-align: center;
       border-radius: 0.5rem;
-      .button__text {
-        font-size: 1.4rem;
-        padding-bottom: 1rem;
-        font-weight: bold;
+      position: relative;
+    @include g.mq('tab') {
+      width: 33rem;
+      margin: 0 0 4rem auto;
+    }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 45%;
+        right: 0.9rem;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-top: 2px solid $orange;
+        border-right: 2px solid $orange;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
       }
-      .white {
-        color: #fff;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -2rem;
+        width: 2rem;
+        height: 100%;
+        transform: translateX(-100%);
+        background: #211613;
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
       }
-      span {
-        font-size: 1.6rem;
-        background-color: #fff;
-        color: $orange;
-        padding: 0.5rem 1.7rem;
-        border-radius: 9999px;
-        margin-right: 1rem;
+      // 四角のボタンの文字部分
+      .square__button {
+        display: inline-block;
+        width: calc(100% - 2.1rem);
+        height: 100%;
+        text-align: center;
+        padding-top: 0.5rem;
+        &--blacktext {
+          display: inline-block;
+          font-size: 1.4rem;
+          font-weight: bold;
+        }
+        &--whitetext {
+          color: #fff;
+          letter-spacing: 0.2rem;
+          font-size: 1.8rem;
+          span {
+            font-size: 1.6rem;
+            background-color: #fff;
+            color: $orange;
+            padding: 0.5rem 1.7rem;
+            border-radius: 9999px;
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+    &__list {
+      width: 100%;
+      max-width: 73rem;
+      margin: 0 auto;
+      @include g.mq('tab') {
+        width: rem;
       }
     }
     &__li {
@@ -195,9 +252,19 @@ main {
       &--text {
         margin-left: 0.7rem;
       }
+      @include g.mq('tab') {
+        font-size: 2rem;
+        padding: 2.5rem;
+      }
     }
     &__figure {
       width: 100%;
+      @include g.mq('pc') {
+        width: 35vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
       img {
         width: 100%;
       }
@@ -205,21 +272,32 @@ main {
   }
   .explanation {
     background-image: url(/image/building.jpg);
+    background-size: cover;
     background-color: rgba(128, 128, 128, .1);
     background-blend-mode: darken;
-    background-size: cover;
     background-repeat: no-repeat;
     padding-top: 8.5rem;
     padding-bottom: 8rem;
+    @include g.mq('tab') {
+      background-image: url(/image/explanation_bg_pc.jpg);
+    }
+
     &__text {
       margin-top: 4.4rem;
       margin-bottom: 8.8rem;
+      margin: 4.4rem auto 8.8rem;
       line-height: 3.2rem;
+      max-width: 73rem;
+      
     }
     &__image {
       width: 55vw;
       text-align: center;
       margin: 0 auto;
+      @include g.mq('tab') {
+        width: 100%;
+        max-width: 73rem;
+      }
       img {
         width: 100%;
       }
@@ -228,7 +306,16 @@ main {
   .gain {
     padding-top:8.5rem ;
     padding-bottom:8rem ;
+    &__flex {
+      @include g.mq('pc') {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
     &__text {
+      @include g.mq('pc') {
+        width: calc(100% - 50rem);
+      }
       &__title {
         font-weight: bold;
         margin-top: 4.4rem;
@@ -240,11 +327,76 @@ main {
       line-height: 2.4rem;
       margin-top: 2.8rem;
       margin-bottom: 4.3rem;
-      padding-left: 5vw;
+      padding-left: 1.1rem;
       li {
         list-style: disc;
       }
     }
+    &__image {
+      width: 100%;
+      max-width: 559px;
+      margin: 0 auto;
+      @include g.mq('pc') {
+        margin-top: 4.4rem;
+        max-width: 445px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .banner {
+    background-image: url(/image/banner-image_sp.png);
+    background-size: cover;
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+    font-size: 2.4rem;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    @include g.mq('tab') {
+      background-image: url(/image/banner_bg_pc.jpg);
+      // text-align: center;
+    }
+    &__layout {
+      @include g.mq('tab') {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    &__text {
+      color: #fff;
+      span {
+        color: $orange;
+      }
+    }
+    &__buttonArea {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin-top: 15rem;
+    @include g.mq('tab') {
+      margin-top: 3rem;
+      width: 54rem;
+    }
+    img {
+      position: absolute;
+      top: -15.5rem;
+      right: -3rem;
+      @include g.mq('tab') {
+        top: -12rem;
+        right: -3rem;
+      }
+      @include g.mq('pc') {
+        top: -10rem;
+        right: -13rem;
+      }
+    }
+    &__button {
+      font-size: 2rem;
+      line-height: 4.8rem;
+      padding: 1.2rem;
+    }
+  }
   }
   .feature {
     padding-top: 7.7rem;
@@ -285,9 +437,16 @@ main {
   }
   .system {
     background-image: url(/image/system_bg.jpg);
+    background-size: cover;
+    background-position: center;
     padding: 8rem 0;
-    &__img {
-      margin-top: 4.8rem;
+    &__image {
+      margin: 4.8rem auto 0;
+      width: 100%;
+      max-width: 50rem;
+      img {
+        width: 100%;
+      }
     }
   }
   .Amazon {
@@ -336,7 +495,7 @@ main {
     }
   }
   .register {
-    padding: 8rem 0 8.8rem;
+    padding-top: 8rem;
     &__steps {
       padding-top: 4.6rem;
     }
@@ -344,7 +503,9 @@ main {
       padding-bottom: 4.3rem;
     }
     &__step {
-      padding-bottom: 8.5rem;
+      &:not(:nth-of-type(1)) {
+        margin-top: 8.4rem;
+      }
       .step__nav {
         display: inline-block;
         background-color: #211613;
@@ -358,18 +519,104 @@ main {
           font-size: 1.8rem;
           padding-bottom: 1rem;
         }
+        h4 {
+          font-weight: bold;
+          font-size: 1.4rem;
+        }
+      }
+      &--buttons {
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+      }
+      &--detail {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
       }
     }
     &__flex {
       display: flex;
       justify-content: center;
-      // margin-top: 4.3rem;
       img {
         margin-right: 1rem;
       }
     }
+    &__button {
+      font-size: 1.4rem;
+      display: inline-block;
+      width: 100%;
+      font-weight: bold;
 
-
+      text-align: center;
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+    }
+    .--orange {
+      background-color: $orange;
+      color: #fff;
+    }
+    .--white {
+      border: #F19917 1px solid;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+    }
+    .Identification {
+      background-color: #F7F7F7;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      margin-top: 2.5rem;
+      margin-bottom: 2rem;
+      &__title {
+        font-weight: bold;
+      }
+      ul {
+        margin-left: 4vw;
+      }
+      li {
+        list-style: disc;
+        // display: block;
+        
+      }
+    }
+  }
+  .footer {
+    background-color: #EFF1F6;
+    text-align: center;
+    padding: 4rem 0 ;
+    &__nav {
+    }
+    &__flex {
+      display: flex;
+      justify-content: center;
+    }
+    &__logo {
+      margin-top: 2.8rem;
+      margin-bottom: 3.3rem;
+    }
+    &__logo--text {
+      color: #71808A;
+      display: inline-block;
+      margin-top: 2.4rem;
+    }
+    &__li {
+      display: inline-block;
+      padding: 0.8rem;
+      color: #211613;
+      &:nth-of-type(1) {
+        position: relative;
+        &::after {
+          content: "";
+          width: 0.1rem;
+          height: 2rem;
+          background-color: #211613;
+          position: absolute;
+          top: 1.5rem;
+          right: -0.2rem;
+        }
+      }
+      
+    }
   }
 }
 
