@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="332" viewBox="0 0 375 332">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: url(#pattern);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="長方形_3369" data-name="長方形 3369" class="cls-1" width="375" height="332" transform="translate(0 4492)"/>
+    </clipPath>
+    <pattern id="pattern" width="1" height="1" viewBox="36.983 -20.26 540.126 306.072">
+      <image preserveAspectRatio="xMidYMid slice" width="611.807" height="305.904" xlink:href="%E3%83%9E%E3%82%B9%E3%82%AF%E3%82%AF%E3%82%99%E3%83%AB%E3%83%BC%E3%83%95%E3%82%9A%204179-image.jpg"/>
+    </pattern>
+  </defs>
+  <g id="マスクグループ_4179" data-name="マスクグループ 4179" class="cls-2" transform="translate(0 -4492)">
+    <rect id="shutterstock_1784879519" class="cls-3" width="539.83" height="305.904" transform="translate(-164.835 4476.867) rotate(-8)"/>
+  </g>
+</svg>

@@ -9,13 +9,6 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <!-- <header class="header">
-    <div class="header__container">
-      <h1 class="header__title">
-        <a href="#"><img src="image/logo_long.svg" alt="VERFUND"></a>
-      </h1>
-    </div>
-  </header> -->
   <main>
     <header class="header">
       <div class="header__container">
@@ -25,8 +18,6 @@
       </div>
     </header>
     <section class="top">
-        <!--  -->
-        <!--  -->
         <div class="container">
           <div class="top__box">
             <div class="top__text">
@@ -35,53 +26,55 @@
             </div>
             <p class="top__catchCopy">スマホで手軽に<br>不動産投資</p>
             <div class="top__buttonArea">
-              <img class="top__img Amazon__speechBubble SPonly" src="/image/amazon_speechBubble-right-buttom.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント">
-              <img class="top__img Amazon__speechBubble tabAndPC" src="/image/amazon_speechBubble-pconly.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント" width="158px" height="158px">
-              <a class="top__button"><span class="free-button">無料</span>新規会員登録</a>
+              <!-- SPのみ表示 -->
+              <img class="top__speechBubble SPonly" src="/images/仮の吹き出しSP.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント">
+              <a class="top__button SPonly"><img src="/images/top_register_button_sp.svg" alt=""></a>
+              <!-- tab,PC表示 -->
+              <img class="top__speechBubble tabAndPC" src="/images/仮の吹き出しPC.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント" width="158px" height="158px">
+              <a class="top__button tabAndPC"><img src="/images/top_register_button_pc.svg" alt=""></a>
             </div>
           </div>
         </div>
     </section>
 
     <section class="recommendation">
+      <div class="recommendation__buttonArea">
+        <a class="square__button" href="">
+          <img src="/images/allow_button.svg" alt="">
+        </a>
+      </div>
       <div class="container">
-        <div class="recommendation__buttonArea">
-            <a class="square__button" href="">
-              <p class="square__button--blacktext">今ならAmazonギフト券1,000円分プレゼント</p>
-              <p class="square__button--whitetext"><span>無料</span>新規会員登録はこちら</p>
-            </a>
-        </div>
         <h2 class="heading">VERFUND（ベルファンド）は<br>こんな人におすすめです</h2>
         <div class="recommendation__list">
           <ul>
             <li>
-              <div class="recommendation__li">
-                <img src="image/checkmark.svg" alt="">
-                <div class="recommendation__li--text">
+              <div class="recommendation__content">
+                <img src="images/checkmark.svg" alt="">
+                <div class="recommendation__content--text">
                   <p>ローンを組むのは怖い...<br class="SPonly">少額で不動産投資を始めてみたい</p>
                 </div>
               </div>
             </li>
             <li>
-              <div class="recommendation__li">
-                <img src="image/checkmark.svg" alt="">
-                <div class="recommendation__li--text">
+              <div class="recommendation__content">
+                <img src="images/checkmark.svg" alt="">
+                <div class="recommendation__content--text">
                   <p>スマホで気軽に始められる不動産<br class="SPonly">投資を探している</p>
                 </div>
               </div>
             </li>
             <li>
-              <div class="recommendation__li">
-                <img src="image/checkmark.svg" alt="">
-                <div class="recommendation__li--text">
+              <div class="recommendation__content">
+                <img src="images/checkmark.svg" alt="">
+                <div class="recommendation__content--text">
                   <p>元本の安全性が高い投資を<br class="SPonly">探している</p>
                 </div>
               </div>
             </li>
             <li>
-              <div class="recommendation__li">
-                <img src="image/checkmark.svg" alt="">
-                <div class="recommendation__li--text">
+              <div class="recommendation__content">
+                <img src="images/checkmark.svg" alt="">
+                <div class="recommendation__content--text">
                   <p>短期で運用できる不動産投資<br class="SPonly">を始めたい</p>
                 </div>
               </div>
@@ -107,21 +100,21 @@
             昨今の値動きが激しいマーケット状況の中、マーケットの影響を受けにくい新しい資産運用として、不動産型クラウドファンディングがいま注目されています。</p>
         </div>
         <div class="explanation__image SPonly">
-          <img src="image/explanation_image_sp.svg" alt="">
+          <img src="images/explanation_image_sp.svg" alt="">
         </div>
-        <div class="explanation__image">
-          <img src="image/explanation_image_pc.svg" alt="">
+        <div class="explanation__image tabAndPC">
+          <img src="images/explanation_image_pc.svg" alt="">
         </div>
       </div>
     </section>
 
     <section class="gain">
-      <div class="container">
+      <div class="container gain__container">
         <h2 class="heading">実際に運用したら<br class="SPonly">どれくらい増える？</h2>
         <div class="gain__flex">
           <div class="gain__text">
-            <h3 class="gain__text__title">100万円を1年間運用したら、<br class="SPonly">いくら増えるでしょうか？</h3>
-            <p>銀行の定期預金に預けておくだけでは1年で「20円」だけしか増えません。
+            <h3 class="gain__text--title">100万円を1年間運用したら、<br class="SPonly">いくら増えるでしょうか？</h3>
+            <p class="gain__text--detail">銀行の定期預金に預けておくだけでは1年で「20円」だけしか増えません。
               <br>
               しかし、VERFUNDでは資金を投資して待つだけで1年で「70,000円」と定期預金に比べて高い利回りで資金が増えることになります。</p>
             <div class="gain__list">
@@ -138,7 +131,7 @@
             </div>
           </div>
           <figure class="gain__image">
-            <img src="/image/gain_image.jpg" alt="">
+            <img src="/images/gain_image.svg" alt="">
           </figure>
         </div>
       </div>
@@ -150,9 +143,12 @@
           <div class="banner__layout">
             <p class="banner__text">スマホでもPCでも<br><span>最短5分</span>で<span>無料</span>会員登録！</p>
             <div class="banner__buttonArea">
+              <!-- SP表示 -->
               <img class="top__img Amazon__speechBubble SPonly" src="/image/amazon_speechBubble-left-buttom.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント">
+              <a class="button banner__button SPonly"><img src="/images/banner_button.svg" alt=""></a>
+              <!-- tab、PC表示 -->
               <img class="top__img Amazon__speechBubble tabAndPC" src="/image/amazon_speechBubble-pconly.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント" width="158px" height="158px">
-              <a class="button banner__button">新規会員登録</a>
+              <a class="button banner__button tabAndPC"><img src="/images/banner_button_pc.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -165,7 +161,7 @@
         <div class="feature__boxes">
           <div class="feature__box">
             <div class="feature__title">
-              <img src="/image/wallet.svg" alt="" haight="67.77px" width="80px">
+              <img src="/images/feature1.svg" alt="" haight="67.77px" width="80px">
               <div class="feature__title--text">
                 <p class="feature__title--tab">特長1</p>
                 <p class="feature__title--bold">10万円から始められる</p>
@@ -179,7 +175,7 @@
           </div><!-- /.feature__box -->
           <div class="feature__box">
             <div class="feature__title">
-              <img src="/image/feature2.svg" alt="" haight="67.77px" width="80px">
+              <img src="/images/feature2.svg" alt="" haight="67.77px" width="80px">
               <div class="feature__title--text">
                 <p class="feature__title--tab">特長2</p>
                 <p class="feature__title--bold">優先出資者の元本の安全性を高める</p>
@@ -193,7 +189,7 @@
           </div><!-- /.feature__boxes -->
           <div class="feature__box">
             <div class="feature__title">
-              <img src="/image/feature3.svg" alt="" haight="69px" width="86.98px">
+              <img src="/images/feature3.svg" alt="" haight="69px" width="86.98px">
               <div class="feature__title--text">
                 <p class="feature__title--tab">特長3</p>
                 <p class="feature__title--bold">運用期間が短く<br class="SPonly">市状変動リスクを<br class="SPonly">追いにくい</p>
@@ -207,7 +203,7 @@
           </div><!-- /.feature__boxes -->
           <div class="feature__box">
             <div class="feature__title">
-              <img src="/image/feature4.svg" alt="" haight="68.75px" width="78.26px">
+              <img src="/images/feature4.svg" alt="" haight="68.75px" width="78.26px">
               <div class="feature__title--text">
                 <p class="feature__title--tab">特長4</p>
                 <p class="feature__title--bold">資産価値が下がりにくい首都圏マンションに投資できる</p>
@@ -234,7 +230,7 @@
             <p>価格下落が生じた場合でも、30%以内であれば劣後出資者である当社が下落額を負担することで、お客様の出資金を守ることができます。</p>
           </div>
           <figure class="system__image">
-            <img src="/image/system_image_sp.svg" alt="">
+            <img src="/images/system_image.svg" alt="">
           </figure>
         </div>
       </div>
@@ -276,15 +272,16 @@
             <div class="Amazon__top--parent">
               <p class="Amazon__top--text SPonly">＼今だけ！／<br><span class="orange">新規会員登録</span>するだけで<br><span class="orange">Amazonギフト券</span><br><span class="font-large"><span class="orange">1,000円分</span>プレゼント<br>キャンペーン実施中！</span></p>
               <p class="Amazon__top--text tabAndPC">＼今だけ！／<br><span class="orange">新規会員登録</span>するだけで<br><span class="orange">Amazonギフト券1,000円分</span>プレゼント<span class="font-large"><span class="orange"></span><br>キャンペーン実施中！</span></p>
-              <img class="Amazon__cardImage" src="/image/AmazonCard.svg" alt="">
+              <img class="Amazon__cardImage" src="/images/AmazonCard.svg" alt="">
             </div>
             <div class="Amazon__button">
-              <a class="button">無料会員登録</a>
+              <a class="button SPonly"><img src="/images/amazon_banner_button_sp.svg" alt=""></a>
+              <a class="button tabAndPC"><img src="/images/amazon_banner_button_pc.svg" alt=""></a>
             </div>
           </div>
           <div class="Amazon__bottom">
             <div class="Amazon__bottom--container">
-              <h2 class="bold">投資家新規会員登録を完了いただいたお客様「全員」に1,000円分のAmazonギフト券をプレゼントします。</h2>
+              <h2 class="Amazon__bottom--heading">投資家新規会員登録を完了いただいたお客様「全員」に1,000円分のAmazonギフト券をプレゼントします。</h2>
               <div class="Amazon__bottom--text">
                 <h3><<キャンペーン期間>></h3>
                 <p>2023年2月1日(水)～2月28日(火)</p>
@@ -319,9 +316,12 @@
           <div class="banner__layout">
             <p class="banner__text">スマホでもPCでも<br><span>最短5分</span>で<span>無料</span>会員登録！</p>
             <div class="banner__buttonArea">
+              <!-- SP表示 -->
               <img class="top__img Amazon__speechBubble SPonly" src="/image/amazon_speechBubble-left-buttom.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント">
+              <a class="button banner__button SPonly"><img src="/images/banner_button.svg" alt=""></a>
+              <!-- tab、PC表示 -->
               <img class="top__img Amazon__speechBubble tabAndPC" src="/image/amazon_speechBubble-pconly.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント" width="158px" height="158px">
-              <a class="button banner__button">新規会員登録</a>
+              <a class="button banner__button tabAndPC"><img src="/images/banner_button_pc.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -339,8 +339,7 @@
                 <p>下記「会員登録はこちらから」をクリックしていただき、メールアドレス等の必要事項を入力し、仮登録申請を行います。</p>
                 <a href="" class="register__arrowButton">
                   <div class="register__flex">
-                    <img src="/image/allow.svg" alt=">>">
-                    <p>会員登録はこちらから</p>
+                    <img src="/images/kari.svg" alt="">
                   </div>
                 </a>
               </div>
@@ -359,8 +358,8 @@
                 <h3>本登録および本人確認書類の提出</h3>
                 <p>ご自身の選択した本人確認方法に従って、本人確認書類の提出を行います。</p>
                 <div class="register__step--buttons">
-                  <a href="" class="register__button --orange">スマートフォンによるオンライン本人確認</a>
-                  <a href="" class="register__button --white">ハガキ郵送による本人確認</a>
+                  <a href="" class="register__button --orange"><img src="/images/step3_orange_button.svg" alt=""></a>
+                  <a href="" class="register__button --white"><img src="/images/step3_button_white.svg" alt=""></a>
                 </div>
                 <h4>①Polarifyによる本人確認</h4>
                 <p class="register__step--detail">本登録の下部にある「スマホで本人確認を行う」を押下して、QRコードを読み取っていただき、オンライン本人確認へ進んでください。
@@ -401,10 +400,11 @@
             <div class="Amazon__top--parent">
               <p class="Amazon__top--text SPonly">＼今だけ！／<br><span class="orange">新規会員登録</span>するだけで<br><span class="orange">Amazonギフト券</span><br><span class="font-large"><span class="orange">1,000円分</span>プレゼント<br>キャンペーン実施中！</span></p>
               <p class="Amazon__top--text tabAndPC">＼今だけ！／<br><span class="orange">新規会員登録</span>するだけで<br><span class="orange">Amazonギフト券1,000円分</span>プレゼント<span class="font-large"><span class="orange"></span><br>キャンペーン実施中！</span></p>
-              <img class="Amazon__cardImage" src="/image/AmazonCard.svg" alt="">
+              <img class="Amazon__cardImage" src="/images/AmazonCard.svg" alt="">
             </div>
             <div class="Amazon__button">
-              <a class="button">無料会員登録</a>
+              <a class="button SPonly"><img src="/images/amazon_banner_button_sp.svg" alt=""></a>
+              <a class="button tabAndPC"><img src="/images/amazon_banner_button_pc.svg" alt=""></a>
             </div>
           </div>
           <div class="Amazon__bottom">
@@ -444,9 +444,12 @@
           <div class="banner__layout">
             <p class="banner__text">スマホでもPCでも<br><span>最短5分</span>で<span>無料</span>会員登録！</p>
             <div class="banner__buttonArea">
+              <!-- SP表示 -->
               <img class="top__img Amazon__speechBubble SPonly" src="/image/amazon_speechBubble-left-buttom.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント">
+              <a class="button banner__button SPonly"><img src="/images/banner_button.svg" alt=""></a>
+              <!-- tab、PC表示 -->
               <img class="top__img Amazon__speechBubble tabAndPC" src="/image/amazon_speechBubble-pconly.svg" alt="今なら新規会員登録でAmazonギフト券1000円分プレゼント" width="158px" height="158px">
-              <a class="button banner__button">新規会員登録</a>
+              <a class="button banner__button tabAndPC"><img src="/images/banner_button_pc.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -454,24 +457,28 @@
     </section>
 
     <footer class="footer">
-      <div class="footer__nav">
-        <ul class="footer__flex">
-          <li class="footer__li">会社概要</li>
-          <li class="footer__li">プライバシーポリシー</li>
-        </ul>
-      </div>
-      <div class="footer__logo">
-        <figure>
-          <img src="/image/vertex_footer_logo.svg" alt="vertex">
-        </figure>
-        <p class="footer__logo--text">株式会社ベルテックス</p>
-      </div>
-      <div class="footer__copy">
-        <p>Copyright (c) Vertex co., ltd. All rights reserved.</p>
+      <div class="container footer__container">
+        <div class="footer__flexBox">
+          <div class="footer__flexBox--leftSide">
+            <div class="footer__nav">
+              <ul class="footer__flex">
+                <li class="footer__li"><a class="footer__link" href="">会社概要</a></li>
+                <li class="footer__li"><a class="footer__link" href="">プライバシーポリシー</a></li>
+              </ul>
+            </div>
+            <div class="footer__logo">
+              <figure>
+                <img src="/images/footer_logo.svg" alt="vertex">
+              </figure>
+              <p class="footer__logo--text">株式会社ベルテックス</p>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <p>Copyright (c) Vertex co., ltd. All rights reserved.</p>
+          </div>
+        </div>
       </div>
     </footer>
-
   </main>
-
 </body>
 </html>

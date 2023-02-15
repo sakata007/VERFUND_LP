@@ -3,6 +3,16 @@ html {
   font-size: 62.5%;
   font-family: "Noto Sans JP";
 }
+body {
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  color: #211613;
+}
+
+img {
+  max-width: 100%;
+}
+
 .tabAndPC {
   display: none !important;
 }
@@ -33,11 +43,6 @@ html {
   }
 }
 
-body {
-  font-size: 1.6rem;
-  line-height: 3.2rem;
-}
-
 .orange {
   color: #F19917;
 }
@@ -48,6 +53,11 @@ body {
   text-align: center;
   line-height: 4rem;
 }
+@media screen and (min-width: 600px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+}
 
 .container {
   padding: 0 5vw;
@@ -55,21 +65,18 @@ body {
   margin: 0 auto;
 }
 
-.ml-4 {
-  margin-left: 3rem;
-}
-
 .button {
   display: inline-block;
-  padding: 1.25rem 2rem;
   width: 100%;
   max-width: 54rem;
   margin: 0 auto;
-  background-color: #F19917;
-  color: #fff;
   font-size: 2rem;
   text-align: center;
   border-radius: 9999px;
+  transition: 0.3s all linear;
+}
+.button:hover {
+  opacity: 0.7;
 }
 .button span {
   background-color: #fff;
@@ -118,7 +125,7 @@ main .top {
 }
 @media screen and (min-width: 600px) {
   main .top__box {
-    width: 445px;
+    width: 462px;
   }
 }
 main .top__text {
@@ -129,11 +136,24 @@ main .top__text--nav {
   font-size: 1.5rem;
   border-bottom: #F19917 2px solid;
 }
+main .top__text--nav:last-of-type {
+  margin-left: 3rem;
+}
+@media screen and (min-width: 600px) {
+  main .top__text--nav:last-of-type {
+    margin-left: 4.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  main .top__text--nav {
+    font-size: 2.4rem;
+  }
+}
 main .top__catchCopy {
   color: #fff;
   font-size: 4.3rem;
   font-family: "Noto Sans JP";
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.3rem;
   line-height: 6rem;
   margin-top: 4rem;
   padding-bottom: 31rem;
@@ -141,43 +161,38 @@ main .top__catchCopy {
 @media screen and (min-width: 600px) {
   main .top__catchCopy {
     padding-bottom: 9rem;
+    font-size: 6rem;
+    letter-spacing: 0.2rem;
+    line-height: 10rem;
   }
 }
 main .top__buttonArea {
   position: relative;
+  width: 32.3rem;
+  margin: 0 auto;
 }
-main .top__buttonArea img {
+@media screen and (min-width: 600px) {
+  main .top__buttonArea {
+    width: 100%;
+  }
+}
+main .top__buttonArea .top__speechBubble {
   position: absolute;
   top: -15.5rem;
   left: -3rem;
+  z-index: 10;
 }
 @media screen and (min-width: 600px) {
-  main .top__buttonArea img {
+  main .top__buttonArea .top__speechBubble {
     top: -9rem;
     left: 42rem;
   }
 }
 main .top__button {
-  display: inline-block;
-  padding: 2rem;
-  width: 100%;
-  background-color: #F19917;
-  color: #fff;
-  font-size: 2rem;
-  text-align: center;
-  border-radius: 9999px;
+  transition: 0.3s all linear;
 }
-@media screen and (min-width: 600px) {
-  main .top__button {
-    padding: 1.8rem;
-  }
-}
-main .top__button span {
-  background-color: #fff;
-  color: #F19917;
-  padding: 0.5rem 1.7rem;
-  border-radius: 9999px;
-  margin-right: 1rem;
+main .top__button:hover {
+  opacity: 0.7;
 }
 main .recommendation {
   margin-top: 4rem;
@@ -189,68 +204,32 @@ main .recommendation {
   }
 }
 main .recommendation__buttonArea {
-  margin: 0 auto 4rem;
   height: 7.8rem;
-  width: 100%;
-  background-color: #F19917;
-  font-size: 2rem;
-  border-radius: 0.5rem;
-  position: relative;
+  width: calc(100% - 10vw);
+  max-width: 1110px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4.2rem;
 }
 @media screen and (min-width: 600px) {
   main .recommendation__buttonArea {
-    width: 33rem;
-    margin: 0 0 4rem auto;
+    position: relative;
   }
 }
-main .recommendation__buttonArea::after {
-  content: "";
-  position: absolute;
-  top: 45%;
-  right: 0.9rem;
-  width: 0.7rem;
-  height: 0.7rem;
-  border-top: 2px solid #F19917;
-  border-right: 2px solid #F19917;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-main .recommendation__buttonArea::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -2rem;
-  width: 2rem;
-  height: 100%;
-  transform: translateX(-100%);
-  background: #211613;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
 main .recommendation__buttonArea .square__button {
+  transition: 0.3s all linear;
   display: inline-block;
-  width: calc(100% - 2.1rem);
-  height: 100%;
-  text-align: center;
-  padding-top: 0.5rem;
 }
-main .recommendation__buttonArea .square__button--blacktext {
-  display: inline-block;
-  font-size: 1.4rem;
-  font-weight: bold;
+main .recommendation__buttonArea .square__button:hover {
+  opacity: 0.8;
 }
-main .recommendation__buttonArea .square__button--whitetext {
-  color: #fff;
-  letter-spacing: 0.2rem;
-  font-size: 1.8rem;
-}
-main .recommendation__buttonArea .square__button--whitetext span {
-  font-size: 1.6rem;
-  background-color: #fff;
-  color: #F19917;
-  padding: 0.5rem 1.7rem;
-  border-radius: 9999px;
-  margin-right: 1rem;
+@media screen and (min-width: 600px) {
+  main .recommendation__buttonArea .square__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+  }
 }
 main .recommendation__list {
   width: 100%;
@@ -262,21 +241,26 @@ main .recommendation__list {
     width: rem;
   }
 }
-main .recommendation__li {
+main .recommendation li {
+  margin-top: 2rem;
+}
+main .recommendation li:first-child {
+  margin-top: 4.3rem;
+}
+main .recommendation__content {
   background-color: rgba(241, 153, 23, 0.2);
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 3.2rem;
-  margin-top: 2rem;
   padding: 1rem 2rem;
   border-radius: 9999px;
   display: flex;
 }
-main .recommendation__li--text {
+main .recommendation__content--text {
   margin-left: 0.7rem;
 }
 @media screen and (min-width: 600px) {
-  main .recommendation__li {
+  main .recommendation__content {
     font-size: 2rem;
     padding: 2.5rem;
   }
@@ -287,6 +271,7 @@ main .recommendation__figure {
 @media screen and (min-width: 650px) {
   main .recommendation__figure {
     width: 38vw;
+    max-width: 60rem;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -334,6 +319,9 @@ main .gain {
   padding-top: 8.5rem;
   padding-bottom: 8rem;
 }
+main .gain__container {
+  max-width: 1200px;
+}
 @media screen and (min-width: 1025px) {
   main .gain__flex {
     display: flex;
@@ -345,7 +333,7 @@ main .gain {
     width: calc(100% - 50rem);
   }
 }
-main .gain__text__title {
+main .gain__text--title {
   font-weight: bold;
   margin-top: 4.4rem;
   margin-bottom: 2.8rem;
@@ -355,7 +343,7 @@ main .gain__list {
   line-height: 2.4rem;
   margin-top: 2.8rem;
   margin-bottom: 4.3rem;
-  padding-left: 1.1rem;
+  padding-left: 1.5rem;
 }
 main .gain__list li {
   list-style: disc;
@@ -412,19 +400,20 @@ main .banner__buttonArea {
     width: 54rem;
   }
 }
-main .banner__buttonArea img {
+main .banner__buttonArea .Amazon__speechBubble {
   position: absolute;
+  z-index: 10;
   top: -15.5rem;
   right: -3rem;
 }
 @media screen and (min-width: 600px) {
-  main .banner__buttonArea img {
+  main .banner__buttonArea .Amazon__speechBubble {
     top: -12rem;
     right: -3rem;
   }
 }
 @media screen and (min-width: 1025px) {
-  main .banner__buttonArea img {
+  main .banner__buttonArea .Amazon__speechBubble {
     top: -10rem;
     right: -13rem;
   }
@@ -496,6 +485,14 @@ main .system {
   background-position: center;
   padding: 8rem 0;
 }
+main .system__flex {
+  margin-top: 3.8rem;
+}
+@media screen and (min-width: 600px) {
+  main .system__flex {
+    margin-top: 5.8rem;
+  }
+}
 @media screen and (min-width: 1025px) {
   main .system__flex {
     display: flex;
@@ -548,6 +545,7 @@ main .fund__layout {
 }
 main .fund__image {
   width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 @media screen and (min-width: 1025px) {
@@ -570,6 +568,11 @@ main .fund__image__title {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__image__title {
+    font-size: 1.7rem;
+  }
 }
 main .fund__image__titleText {
   display: inline-block;
@@ -635,6 +638,11 @@ main .fund__data .unit {
 }
 main .fund__data .bold__number {
   font-weight: bold;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__data .bold__number {
+    font-size: 1.8rem;
+  }
 }
 main .fund__dataContainer.--top {
   flex-flow: column;
@@ -767,6 +775,15 @@ main .Amazon__bottom {
   border-bottom-right-radius: 1rem;
   background-color: #F0F0F0;
 }
+@media screen and (min-width: 600px) {
+  main .Amazon__bottom {
+    padding: 6rem 1.8rem 6.4rem;
+  }
+}
+main .Amazon__bottom--heading {
+  font-weight: bold;
+  line-height: 2.8rem;
+}
 main .Amazon__bottom h3 {
   font-weight: bold;
 }
@@ -775,8 +792,12 @@ main .Amazon__bottom--container {
   margin: 0 auto;
 }
 main .Amazon__bottom--text {
-  padding-bottom: 2.5rem;
+  padding-bottom: 2.3rem;
   font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+main .Amazon__bottom--text:first-of-type {
+  margin-top: 2rem;
 }
 main .Amazon__notice {
   margin-left: 1.6rem;
@@ -800,7 +821,7 @@ main .register__steps {
     z-index: -1;
     width: 0.5rem;
     left: 5.5rem;
-    height: calc(100% - 12rem);
+    height: 90%;
     background-color: #211613;
   }
 }
@@ -858,50 +879,29 @@ main .register__step--detail {
 }
 main .register__arrowButton {
   display: inline-block;
-  padding: 1.25rem 2rem;
   width: 100%;
   margin: 4.7rem auto 0;
-  background-color: #F19917;
-  color: #fff;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  border-radius: 9999px;
+  transition: 0.3s all linear;
+}
+main .register__arrowButton:hover {
+  opacity: 0.7;
 }
 @media screen and (min-width: 600px) {
   main .register__arrowButton {
     width: 35rem;
   }
 }
-main .register__arrowButton span {
-  background-color: #fff;
-  color: #F19917;
-  padding: 0.5rem 1.7rem;
-  border-radius: 9999px;
-  margin-right: 1rem;
-}
-main .register__arrowButton:hover {
-  opacity: 0.7;
-}
 main .register__flex {
   display: flex;
   justify-content: center;
 }
-main .register__flex img {
-  margin-right: 1rem;
-}
 main .register__button {
-  font-size: 1.4rem;
   display: inline-block;
-  width: 100%;
-  font-weight: bold;
-  text-align: center;
-  padding: 0.8rem;
-  border-radius: 0.5rem;
+  transition: 0.3s all linear;
 }
-main .register .--orange {
-  background-color: #F19917;
-  color: #fff;
+main .register__button:hover {
+  opacity: 0.7;
+  background-color: rgba(112, 128, 138, 0.1);
 }
 @media screen and (min-width: 600px) {
   main .register .--orange {
@@ -914,8 +914,6 @@ main .register .--orange {
   }
 }
 main .register .--white {
-  border: #F19917 1px solid;
-  font-size: 1.8rem;
   margin-top: 1rem;
 }
 @media screen and (min-width: 600px) {
@@ -949,24 +947,62 @@ main .register .Identification li {
 main .footer {
   background-color: #EFF1F6;
   text-align: center;
-  padding: 4rem 0;
+  padding: 3rem 0;
+}
+main .footer__container {
+  max-width: 1300px;
+}
+@media screen and (min-width: 1025px) {
+  main .footer__flexBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+main .footer__flexBox--leftSide {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1025px) {
+  main .footer__nav {
+    width: 25rem;
+    order: 2;
+    margin-bottom: 0.5rem;
+    margin-right: 12rem;
+  }
 }
 main .footer__flex {
   display: flex;
   justify-content: center;
 }
 main .footer__logo {
-  margin-top: 2.8rem;
-  margin-bottom: 3.3rem;
+  margin-top: 2.4rem;
+  margin-bottom: 2.8rem;
+}
+@media screen and (min-width: 1025px) {
+  main .footer__logo {
+    display: flex;
+    order: 1;
+    margin-right: 2rem;
+  }
 }
 main .footer__logo--text {
   color: #71808A;
+  font-size: 1.2rem;
   display: inline-block;
   margin-top: 2.4rem;
 }
+@media screen and (min-width: 1025px) {
+  main .footer__logo--text {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+}
 main .footer__li {
   display: inline-block;
-  padding: 0.8rem;
+  padding: 0 0.8rem;
+  font-size: 1.4rem;
   color: #211613;
 }
 main .footer__li:nth-of-type(1) {
@@ -978,6 +1014,20 @@ main .footer__li:nth-of-type(1)::after {
   height: 2rem;
   background-color: #211613;
   position: absolute;
-  top: 1.5rem;
+  top: 0.6rem;
   right: -0.2rem;
+}
+main .footer__link {
+  transition: 0.3s all linear;
+}
+main .footer__link:hover {
+  opacity: 0.7;
+}
+main .footer__copy {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 1025px) {
+  main .footer__copy {
+    order: 3;
+  }
 }

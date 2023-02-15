@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="63.765" viewBox="0 0 80 63.765">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_3304" data-name="長方形 3304" width="80" height="63.765" fill="none" stroke="#707070" stroke-width="2"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_4314" data-name="グループ 4314" transform="translate(-25 -3783.699)">
+    <g id="グループ_4172" data-name="グループ 4172" transform="translate(25 3783.699)">
+      <g id="マスクグループ_4171" data-name="マスクグループ 4171" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="パス_3255" data-name="パス 3255" d="M99.184,8.74V25.3H95.567V8.74A7.242,7.242,0,0,0,88.32,1.5h3.624a7.235,7.235,0,0,1,7.24,7.24" transform="translate(-27.503 -0.467)" fill="#ffc124"/>
+        <path id="パス_3256" data-name="パス 3256" d="M99.184,56.543V73.1a7.235,7.235,0,0,1-7.24,7.24H88.32a7.242,7.242,0,0,0,7.247-7.24V56.543Z" transform="translate(-27.503 -17.608)" fill="#ffc124"/>
+        <rect id="長方形_3303" data-name="長方形 3303" width="28.244" height="14.1" rx="3.5" transform="translate(50.723 24.832)" fill="none" stroke="#211613" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="パス_3257" data-name="パス 3257" d="M75.806,25.3V8.74A7.24,7.24,0,0,0,68.565,1.5H8.74A7.24,7.24,0,0,0,1.5,8.74V55.959A7.24,7.24,0,0,0,8.74,63.2H68.565a7.24,7.24,0,0,0,7.241-7.24V39.4" transform="translate(-0.467 -0.467)" fill="none" stroke="#211613" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="パス_3258" data-name="パス 3258" d="M87.548,80.339a7.24,7.24,0,0,0,7.24-7.24V56.54" transform="translate(-27.263 -17.607)" fill="none" stroke="#211613" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <path id="パス_3259" data-name="パス 3259" d="M94.788,25.3V8.74a7.24,7.24,0,0,0-7.24-7.24" transform="translate(-27.263 -0.467)" fill="none" stroke="#211613" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <circle id="楕円形_508" data-name="楕円形 508" cx="3.141" cy="3.141" r="3.141" transform="translate(55.157 28.741)" fill="none" stroke="#211613" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="線_1107" data-name="線 1107" y2="2.27" transform="translate(7.002 7.747)" fill="none" stroke="#211613" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="線_1108" data-name="線 1108" y2="2.27" transform="translate(7.002 15.414)" fill="none" stroke="#211613" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="線_1109" data-name="線 1109" y2="2.27" transform="translate(7.002 23.081)" fill="none" stroke="#211613" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="線_1110" data-name="線 1110" y2="2.27" transform="translate(7.002 30.748)" fill="none" stroke="#211613" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="線_1111" data-name="線 1111" y2="2.27" transform="translate(7.002 38.415)" fill="none" stroke="#211613" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="線_1112" data-name="線 1112" y2="2.27" transform="translate(7.002 46.082)" fill="none" stroke="#211613" stroke-miterlimit="10" stroke-width="2"/>
+        <line id="線_1113" data-name="線 1113" y2="2.27" transform="translate(7.002 53.748)" fill="none" stroke="#211613" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+    <path id="パス_6568" data-name="パス 6568" d="M83.986,46.887V50.46H77.461l-1.088,1.912V54.65h7.613v3.575H76.373V64.45H72.658V58.225H65.045V54.65h7.613V52.372l-1.09-1.912H65.045V46.887H69.53l-5.337-9.369H68l6.518,11.441,6.52-11.441h3.8L79.5,46.887Z" transform="translate(-17.212 3765.049)" fill="#211613"/>
+  </g>
+</svg>
