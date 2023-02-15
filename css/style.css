@@ -112,13 +112,13 @@ img {
 main .top {
   padding-top: 10rem;
   padding-bottom: 4rem;
-  background-image: url(/image/top-bg.png);
+  background-image: url(/images/top-bg.png);
   background-size: cover;
   background-position: center;
 }
 @media screen and (min-width: 600px) {
   main .top {
-    background-image: url(/image/top_bg_pc.jpg);
+    background-image: url(/images/top_bg_pc.jpg);
     padding-top: 21rem;
     padding-bottom: 14rem;
   }
@@ -281,7 +281,7 @@ main .recommendation__figure img {
   width: 100%;
 }
 main .explanation {
-  background-image: url(/image/building.jpg);
+  background-image: url(/images/building.jpg);
   background-size: cover;
   background-color: rgba(128, 128, 128, 0.1);
   background-blend-mode: darken;
@@ -291,7 +291,7 @@ main .explanation {
 }
 @media screen and (min-width: 600px) {
   main .explanation {
-    background-image: url(/image/explanation_bg_pc.jpg);
+    background-image: url(/images/explanation_bg_pc.jpg);
   }
 }
 main .explanation__text {
@@ -363,7 +363,7 @@ main .gain__image img {
   width: 100%;
 }
 main .banner {
-  background-image: url(/image/banner-image_sp.png);
+  background-image: url(/images/banner-image_sp.png);
   background-size: cover;
   padding-top: 4.5rem;
   padding-bottom: 4rem;
@@ -373,7 +373,7 @@ main .banner {
 }
 @media screen and (min-width: 600px) {
   main .banner {
-    background-image: url(/image/banner_bg_pc.jpg);
+    background-image: url(/images/banner_bg_pc.jpg);
   }
 }
 @media screen and (min-width: 600px) {
@@ -480,7 +480,7 @@ main .feature__text {
   line-height: 2.5rem;
 }
 main .system {
-  background-image: url(/image/system_bg.jpg);
+  background-image: url(/images/system_bg.jpg);
   background-size: cover;
   background-position: center;
   padding: 8rem 0;
