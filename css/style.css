@@ -3,10 +3,19 @@ html {
   font-size: 62.5%;
   font-family: "Noto Sans JP";
 }
-.PConly {
-  display: none;
+.tabAndPC {
+  display: none !important;
 }
 @media screen and (min-width: 600px) {
+  .tabAndPC {
+    display: block !important;
+  }
+}
+
+.PConly {
+  display: none !important;
+}
+@media screen and (min-width: 1025px) {
   .PConly {
     display: block !important;
   }
@@ -14,6 +23,12 @@ html {
 
 @media screen and (min-width: 600px) {
   .SPonly {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .tabAndSP {
     display: none !important;
   }
 }
@@ -44,14 +59,12 @@ body {
   margin-left: 3rem;
 }
 
-.PConly {
-  display: none;
-}
-
 .button {
   display: inline-block;
   padding: 1.25rem 2rem;
   width: 100%;
+  max-width: 54rem;
+  margin: 0 auto;
   background-color: #F19917;
   color: #fff;
   font-size: 2rem;
@@ -74,10 +87,8 @@ body {
 }
 
 .header {
-  position: fixed;
-  z-index: 10;
+  position: absolute;
   width: 100%;
-  background-color: black;
 }
 .header__title {
   margin: 2.5rem 0;
@@ -273,9 +284,9 @@ main .recommendation__li--text {
 main .recommendation__figure {
   width: 100%;
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 650px) {
   main .recommendation__figure {
-    width: 35vw;
+    width: 38vw;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -427,16 +438,35 @@ main .feature {
   padding-top: 7.7rem;
   padding-bottom: 8rem;
 }
+@media screen and (min-width: 1025px) {
+  main .feature__boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin-top: 7rem;
+  }
+}
 main .feature__box {
+  width: 100%;
   background-color: rgba(241, 153, 23, 0.2);
   padding: 1.7rem;
   border-radius: 1rem;
 }
-main .feature__box:nth-of-type(1) {
-  margin-top: 4.5rem;
+@media screen and (max-width: 1024px) {
+  main .feature__box:nth-of-type(1) {
+    margin-top: 4.5rem;
+  }
+  main .feature__box:not(:nth-of-type(1)) {
+    margin-top: 2rem;
+  }
 }
-main .feature__box:not(:nth-of-type(1)) {
-  margin-top: 2rem;
+@media screen and (min-width: 1025px) {
+  main .feature__box {
+    width: calc((100% - 5rem) / 2);
+  }
+  main .feature__box:nth-last-of-type(-n+2) {
+    margin-top: 2.4rem;
+  }
 }
 main .feature__title {
   display: flex;
@@ -466,17 +496,206 @@ main .system {
   background-position: center;
   padding: 8rem 0;
 }
+@media screen and (min-width: 1025px) {
+  main .system__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .system__text {
+    width: calc(100% - 50rem);
+    margin: 4.8rem auto 0;
+    margin-right: 5rem;
+  }
+}
 main .system__image {
   margin: 4.8rem auto 0;
   width: 100%;
-  max-width: 50rem;
+  max-width: 73rem;
 }
 main .system__image img {
   width: 100%;
 }
+main .fund {
+  background-color: #F0F0F0;
+  padding-top: 8.5rem;
+  padding-bottom: 8rem;
+}
+main .fund__name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+main .fund__name::before {
+  content: "";
+  position: absolute;
+  width: 1.6rem;
+  height: 0.2rem;
+  background-color: #F19917;
+  top: 50%;
+  left: 0;
+}
+main .fund__layout {
+  max-width: 111rem;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__layout {
+    display: flex;
+  }
+}
+main .fund__image {
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__image {
+    width: 44.5rem;
+    height: 33.2rem;
+  }
+}
+main .fund__image__title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 14%;
+  background-color: #303639;
+  color: #fff;
+  font-size: 2vw;
+  text-align: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .fund__image__titleText {
+  display: inline-block;
+}
+main .fund__image img {
+  width: 100%;
+  border-radius: 2rem;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__image img {
+    width: 44.5rem;
+    height: 33.2rem;
+  }
+}
+main .fund__dataArea {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__dataArea {
+    width: calc(100% - 3rem);
+    max-width: 63.5rem;
+    margin-left: 3rem;
+    margin-top: 0;
+  }
+}
+main .fund__dataContainer {
+  display: flex;
+  margin-bottom: 0.8rem;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__dataContainer:not(:last-of-type) {
+    margin-bottom: 1.6rem;
+  }
+}
+main .fund__data {
+  background-color: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+main .fund__data--text {
+  line-height: 1.15;
+}
+main .fund__data br {
+  display: block;
+  content: "";
+  height: 10px;
+}
+main .fund__data .data__name {
+  vertical-align: middle;
+}
+main .fund__data .large__number {
+  font-size: 4.2rem;
+  font-weight: bold;
+  line-height: 5.4rem;
+}
+main .fund__data .unit {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+main .fund__data .bold__number {
+  font-weight: bold;
+}
+main .fund__dataContainer.--top {
+  flex-flow: column;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__dataContainer.--top {
+    display: flex;
+    flex-flow: row;
+  }
+}
+main .fund__dataContainer.--top .fund__data {
+  width: 100%;
+  height: 5.4rem;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__dataContainer.--top .fund__data {
+    height: 9rem;
+  }
+}
+main .fund__dataContainer.--top .fund__data:nth-of-type(1) {
+  margin-bottom: 0.8rem;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__dataContainer.--top .fund__data:nth-of-type(1) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .fund__dataContainer.--top .fund__data:nth-of-type(2) {
+    margin-left: 1rem;
+  }
+}
+main .fund__dataContainer.--middle {
+  flex-flow: row;
+  justify-content: space-between;
+}
+main .fund__dataContainer.--middle .fund__data {
+  width: calc((100% - 2rem) / 3);
+  height: 9.1rem;
+  padding: 1rem 0;
+}
+main .fund__dataContainer.--bottom .fund__data {
+  height: 5.5rem;
+  width: 100%;
+  color: #F19917;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 1025px) {
+  main .fund__dataContainer.--bottom .fund__data {
+    height: 7.1rem;
+  }
+}
 main .Amazon {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+@media screen and (min-width: 1025px) {
+  main .Amazon {
+    padding-bottom: 6.5rem;
+  }
 }
 main .Amazon__top {
   background-color: #211613;
@@ -484,19 +703,63 @@ main .Amazon__top {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
+@media screen and (min-width: 600px) {
+  main .Amazon__top {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .Amazon__top {
+    position: relative;
+  }
+}
 main .Amazon__top--parent {
   color: #fff;
   padding-bottom: 3.6rem;
   position: relative;
 }
-main .Amazon__top--parent img {
-  position: absolute;
-  top: 0;
-  right: 0;
+@media screen and (min-width: 600px) {
+  main .Amazon__top--parent {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .Amazon__top--parent {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  main .Amazon__top--parent img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .Amazon__top--parent img {
+    height: 240px;
+    margin-left: 7rem;
+  }
 }
 main .Amazon__top--parent .font-large {
   font-size: 2.7rem;
   letter-spacing: 0.2rem;
+}
+main .Amazon__top--text {
+  display: inline-block;
+}
+main .Amazon__button {
+  text-align: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1025px) {
+  main .Amazon__button {
+    position: absolute;
+    width: 100%;
+    top: 25rem;
+    left: 0;
+  }
 }
 main .Amazon__bottom {
   padding: 2.8rem 1.8rem 3.5rem;
@@ -506,6 +769,10 @@ main .Amazon__bottom {
 }
 main .Amazon__bottom h3 {
   font-weight: bold;
+}
+main .Amazon__bottom--container {
+  max-width: 73rem;
+  margin: 0 auto;
 }
 main .Amazon__bottom--text {
   padding-bottom: 2.5rem;
@@ -524,9 +791,23 @@ main .register {
 }
 main .register__steps {
   padding-top: 4.6rem;
+  position: relative;
 }
-main .register .pb-43 {
-  padding-bottom: 4.3rem;
+@media screen and (min-width: 600px) {
+  main .register__steps::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 0.5rem;
+    left: 5.5rem;
+    height: calc(100% - 12rem);
+    background-color: #211613;
+  }
+}
+@media screen and (min-width: 600px) {
+  main .register__step {
+    display: flex;
+  }
 }
 main .register__step:not(:nth-of-type(1)) {
   margin-top: 8.4rem;
@@ -536,9 +817,16 @@ main .register__step .step__nav {
   background-color: #211613;
   color: #fff;
   padding: 0.5rem 3rem;
+  height: 4.2rem;
 }
 main .register__step--text {
   padding-top: 3.8rem;
+}
+@media screen and (min-width: 600px) {
+  main .register__step--text {
+    padding-top: 0;
+    margin-left: 4rem;
+  }
 }
 main .register__step--text h3 {
   font-weight: bold;
@@ -553,9 +841,47 @@ main .register__step--buttons {
   margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 600px) {
+  main .register__step--buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .register__step--buttons {
+    flex-direction: row;
+  }
+}
 main .register__step--detail {
   font-size: 1.4rem;
   line-height: 2.1rem;
+}
+main .register__arrowButton {
+  display: inline-block;
+  padding: 1.25rem 2rem;
+  width: 100%;
+  margin: 4.7rem auto 0;
+  background-color: #F19917;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 9999px;
+}
+@media screen and (min-width: 600px) {
+  main .register__arrowButton {
+    width: 35rem;
+  }
+}
+main .register__arrowButton span {
+  background-color: #fff;
+  color: #F19917;
+  padding: 0.5rem 1.7rem;
+  border-radius: 9999px;
+  margin-right: 1rem;
+}
+main .register__arrowButton:hover {
+  opacity: 0.7;
 }
 main .register__flex {
   display: flex;
@@ -577,10 +903,30 @@ main .register .--orange {
   background-color: #F19917;
   color: #fff;
 }
+@media screen and (min-width: 600px) {
+  main .register .--orange {
+    max-width: 35rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .register .--orange {
+    margin-right: 2rem;
+  }
+}
 main .register .--white {
   border: #F19917 1px solid;
   font-size: 1.8rem;
   margin-top: 1rem;
+}
+@media screen and (min-width: 600px) {
+  main .register .--white {
+    max-width: 35rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  main .register .--white {
+    margin-top: 0;
+  }
 }
 main .register .Identification {
   background-color: #F7F7F7;
